@@ -1,14 +1,9 @@
 body {
-  /* Set line height + system font */
   font: 100%/1.5 system-ui;
 
-  /* Limit width for readability */
   max-width: 100ch;
 
-  /* Center the content */
-  margin-left: auto;
-  margin-right: auto;
+  margin-inline: auto;
 
-  /* Add spacing so text isn't touching edges */
   padding: 1rem;
 }
