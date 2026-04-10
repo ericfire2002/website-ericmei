@@ -52,3 +52,22 @@ textarea,
 button {
   font: inherit;
 }
+/* Make labels and inputs stack vertically */
+label,
+input,
+textarea,
+button {
+  display: block;
+}
+
+/* Make inputs take full width */
+input,
+textarea {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Add spacing around labels */
+label {
+  margin-block: 0.5em;
+}
