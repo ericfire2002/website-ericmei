@@ -110,7 +110,6 @@ h1 {
 h1 + p {
   margin-top: 0;
   margin-bottom: 1.5rem;
-  color: color-mix(in oklch, canvastext, canvas 10%);
 }
 
 section {
