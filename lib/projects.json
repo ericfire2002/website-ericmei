@@ -2,73 +2,73 @@
   {
     "title": "Personal Portfolio Website",
     "year": "2026",
-    "image": "../images/12_ways_1.jpg",
+    "image": "../images/giraffe.jpg",
     "description": "A personal website built with HTML, CSS, and JavaScript to showcase my resume, projects, and GitHub data."
   },
   {
     "title": "GitHub API Profile Stats",
     "year": "2025",
-    "image": "../images/1108024_The_Secret_Lives_of_Animals_Big_Image_06_big_image_post.jpg.slideshow_large.jpg",
+    "image": "../images/whitemonkey.jpg",
     "description": "A JavaScript project that fetches public GitHub profile data from an API and displays profile statistics dynamically on a webpage."
   },
   {
     "title": "Dynamic Projects Page",
     "year": "2024",
-    "image": "../images/4134628044_75cc3b72ef_o.jpg",
+    "image": "../images/mammoth.jpg",
     "description": "A projects page that loads project information from a JSON file and renders project cards dynamically using reusable JavaScript functions."
   },
   {
     "title": "Resume/CV Webpage",
     "year": "2026",
-    "image": "../images/AdobeStock_123823873_433578_reduced.jpg",
+    "image": "../images/bigcat.jpg",
     "description": "A resume page created with semantic HTML sections and styled with CSS for layout, readability, and responsive design."
   },
   {
     "title": "Dark Mode Website Toggle",
     "year": "2022",
-    "image": "../images/African Painted Dogs 0187 - Grahm S. Jones, Columbus Zoo and Aquarium.jpg",
+    "image": "../images/oddanimal.jpg",
     "description": "A website feature that allows users to switch between light mode, dark mode, and automatic color scheme settings."
   },
   {
     "title": "Projects Grid Layout",
     "year": "2021",
-    "image": "../images/final_animals-homeschooling_credit-alamy.jpg",
+    "image": "../images/armadillo.jpeg",
     "description": "A responsive project gallery using CSS Grid to organize project cards cleanly across different screen sizes."
   },
   {
     "title": "Abortion Access Visualization",
     "year": "2020",
-    "image": "../images/h_27.RTS17H2T8.jpg.avif",
+    "image": "../images/fawn.jpeg",
     "description": "A data visualization project comparing abortion access and abortion rates across states to explore different arguments about policy effectiveness."
   },
   {
     "title": "Cache Performance Analysis",
     "year": "2022",
-    "image": "../images/images.jpeg",
+    "image": "../images/panda.jpeg",
     "description": "A systems performance assignment analyzing row-major and column-major memory traversal using runtime measurements and cache behavior."
   },
   {
     "title": "SoCalGuessr Image Classifier",
     "year": "2025",
-    "image": "../images/lamb-iStock-665494268-16x9-e1559777676675.jpg",
+    "image": "../images/lamb.jpg",
     "description": "A machine learning project that classifies Southern California city images using transfer learning and convolutional neural networks."
   },
   {
     "title": "Motor Imagery BCI Transfer Learning",
     "year": "2025",
-    "image": "../images/LC202303_AmboseliCommsSummit_047_404034_reduced.jpg",
+    "image": "../images/zebra.jpg",
     "description": "A research-style project exploring transfer learning for EEG-based motor imagery brain-computer interfaces across datasets with different channel setups."
   },
   {
     "title": "Menu Match Food Classifier",
     "year": "2023",
-    "image": "../images/tiger_laying_hero_background.jpg",
+    "image": "../images/tiger.jpg",
     "description": "A binary image classification project focused on identifying Asian food images versus other food categories."
   },
   {
     "title": "PCA Eigenfaces Assignment",
     "year": "2024",
-    "image": "../images/tnc_48372766.jpg.webp",
+    "image": "../images/fox.jpg",
     "description": "A data science assignment using principal component analysis to reduce dimensionality and analyze face image data."
   }
 ]
