@@ -86,11 +86,11 @@ h6 {
   text-wrap: balance;
 }
 
-.projects {
+/* .projects {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
   gap: 1em;
-}
+} */
 /* 
 .projects article {
   display: grid;
@@ -98,7 +98,8 @@ h6 {
   grid-row: span 3;
   gap: 0.5em;
 } */
-.projects article {
+
+/* .projects article {
   display: grid;
   grid-template-rows: auto auto 1fr;
   gap: 0.5em;
@@ -114,6 +115,36 @@ h6 {
   height: 200px;
   object-fit: cover;
   display: block;
+} */
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(18em, 1fr));
+  gap: 2em;
+}
+
+.projects article {
+  display: block;
+  overflow: hidden;
+}
+
+.projects article h2 {
+  margin: 0 0 0.5em;
+  font-size: 1.2rem;
+  line-height: 1.1;
+}
+
+.projects article img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+  margin-bottom: 0.75em;
+}
+
+.projects article p {
+  margin: 0;
+  line-height: 1.5;
 }
 
 h1 {
