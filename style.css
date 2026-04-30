@@ -221,3 +221,9 @@ section ul li::marker {
   color: gray;
   margin-top: 0.5em;
 }
+
+#projects-plot {
+  max-width: 20em;
+  display: block;
+  margin-block: 2em;
+}
