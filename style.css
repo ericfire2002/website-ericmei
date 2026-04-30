@@ -214,3 +214,10 @@ section ul li::marker {
 .color-scheme select {
   margin-left: 0.5rem;
 }
+
+.project-year {
+  font-family: Baskerville, serif;
+  font-variant-numeric: oldstyle-nums;
+  color: gray;
+  margin-top: 0.5em;
+}
