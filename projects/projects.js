@@ -12,6 +12,8 @@ const projectsTitle = document.querySelector('.projects-title');
 
 let query = '';
 
+let selectedIndex = -1;
+
 projectsTitle.textContent = `Projects (${projects.length})`;
 
 function renderPieChart(projectsGiven) {
@@ -43,21 +45,34 @@ function renderPieChart(projectsGiven) {
   let legend = d3.select('.legend');
   legend.selectAll('li').remove();
 
-  arcs.forEach((arc, idx) => {
-    svg
-      .append('path')
-      .attr('d', arc)
-      .attr('fill', colors(idx));
-  });
+  arcs.forEach((arc, i) => {
+  svg
+    .append('path')
+    .attr('d', arc)
+    .attr('fill', colors(i))
+    .attr('class', i === selectedIndex ? 'selected' : '')
+    .on('click', () => {
+      selectedIndex = selectedIndex === i ? -1 : i;
 
-  data.forEach((d, idx) => {
-    legend
-      .append('li')
-      .attr('style', `--color:${colors(idx)}`)
-      .attr('class', 'legend-item')
-      .html(`<span class="swatch"></span> ${d.label} <em>(${d.value})</em>`);
-  });
-}
+      svg
+        .selectAll('path')
+        .attr('class', (_, idx) => idx === selectedIndex ? 'selected' : '');
+
+      legend
+        .selectAll('li')
+        .attr('class', (_, idx) =>
+          idx === selectedIndex ? 'legend-item selected' : 'legend-item'
+        );
+    });
+});
+
+data.forEach((d, idx) => {
+  legend
+    .append('li')
+    .attr('style', `--color:${colors(idx)}`)
+    .attr('class', idx === selectedIndex ? 'legend-item selected' : 'legend-item')
+    .html(`<span class="swatch"></span> ${d.label} <em>(${d.value})</em>`);
+});
 
 renderPieChart(projects);
 
