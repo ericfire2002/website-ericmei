@@ -222,7 +222,7 @@ section ul li::marker {
   margin-top: 0.5em;
 }
 
-#projects-pie-plot {
+#projects-plot {
   max-width: 20em;
   margin-block: 2em;
 
