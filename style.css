@@ -223,8 +223,9 @@ section ul li::marker {
 }
 
 #projects-pie-plot {
+  width: 100%;
   max-width: 20em;
+  display: block;
   margin-block: 2em;
-
   overflow: visible;
 }
