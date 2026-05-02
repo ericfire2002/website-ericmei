@@ -51,3 +51,13 @@ arcs.forEach((arc, idx) => {
     .attr('fill', colors(idx));
 });
 
+let legend = d3.select('.legend');
+
+data.forEach((d, idx) => {
+  legend
+    .append('li')
+    .attr('style', `--color:${colors(idx)}`)
+    .attr('class', 'legend-item')
+    .html(`<span class="swatch"></span> ${d.label} <em>(${d.value})</em>`);
+});
+
