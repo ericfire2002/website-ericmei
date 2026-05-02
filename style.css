@@ -271,3 +271,10 @@ section ul li::marker {
   border-radius: 999px;
 }
 
+#projects-pie-plot path {
+  transition: 300ms;
+}
+
+#projects-pie-plot:has(path:hover) path:not(:hover) {
+  opacity: 0.5;
+}
