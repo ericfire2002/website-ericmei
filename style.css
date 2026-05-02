@@ -231,6 +231,7 @@ section ul li::marker {
 }
 
 .legend {
+  flex: 1;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));
   gap: 1em;
@@ -252,4 +253,11 @@ section ul li::marker {
   display: inline-block;
   background: var(--color);
   border-radius: 50%;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  margin-block: 2em;
 }
