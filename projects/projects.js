@@ -76,7 +76,7 @@ function renderPieChart(projectsGiven) {
     renderProjects(filteredProjects, projectsContainer, 'h2');
     projectsTitle.textContent = `Projects (${filteredProjects.length})`;
   }
-});
+    });
 });
 
 data.forEach((d, idx) => {
@@ -86,8 +86,7 @@ data.forEach((d, idx) => {
     .attr('class', idx === selectedIndex ? 'legend-item selected' : 'legend-item')
     .html(`<span class="swatch"></span> ${d.label} <em>(${d.value})</em>`);
 });
-
-renderPieChart(projects);
+}
 
 let searchInput = document.querySelector('.searchBar');
 
@@ -103,4 +102,4 @@ searchInput.addEventListener('input', (event) => {
   renderPieChart(filteredProjects);
 
   projectsTitle.textContent = `Projects (${filteredProjects.length})`;
-})}
+});
