@@ -1,6 +1,9 @@
 import { fetchJSON, renderProjects, fetchGitHubData } from './global.js';
 const projects = await fetchJSON('./lib/projects.json');
-const latestProjects = projects.slice(0, 3);
+const latestProjects = projects.slice(0, 3).map((project) => ({
+  ...project,
+  image: project.image.replace('../images/', 'images/')
+}));
 const projectsContainer = document.querySelector('.projects');
 renderProjects(latestProjects, projectsContainer, 'h2');
 const githubData = await fetchGitHubData('ericfire2002');
