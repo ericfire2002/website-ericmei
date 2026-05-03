@@ -63,7 +63,20 @@ function renderPieChart(projectsGiven) {
         .attr('class', (_, idx) =>
           idx === selectedIndex ? 'legend-item selected' : 'legend-item'
         );
-    });
+        if (selectedIndex === -1) {
+    renderProjects(projects, projectsContainer, 'h2');
+    projectsTitle.textContent = `Projects (${projects.length})`;
+  } else {
+    let selectedYear = data[selectedIndex].label;
+
+    let filteredProjects = projects.filter((project) =>
+      project.year === selectedYear
+    );
+
+    renderProjects(filteredProjects, projectsContainer, 'h2');
+    projectsTitle.textContent = `Projects (${filteredProjects.length})`;
+  }
+});
 });
 
 data.forEach((d, idx) => {
@@ -90,4 +103,4 @@ searchInput.addEventListener('input', (event) => {
   renderPieChart(filteredProjects);
 
   projectsTitle.textContent = `Projects (${filteredProjects.length})`;
-});
+})}
