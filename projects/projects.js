@@ -88,6 +88,8 @@ data.forEach((d, idx) => {
 });
 }
 
+renderPieChart(projects);
+
 let searchInput = document.querySelector('.searchBar');
 
 searchInput.addEventListener('input', (event) => {
