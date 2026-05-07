@@ -287,3 +287,20 @@ section ul li::marker {
 .selected:is(path) {
   fill: var(--color);
 }
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-block: 2rem;
+}
+
+.stats dt {
+  font-weight: bold;
+  color: var(--color-accent);
+}
+
+.stats dd {
+  margin: 0;
+  font-size: 2rem;
+}
