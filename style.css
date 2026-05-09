@@ -304,3 +304,12 @@ section ul li::marker {
   margin: 0;
   font-size: 2rem;
 }
+
+.gridlines line {
+  stroke: color-mix(in oklch, canvastext 20%, canvas);
+  stroke-opacity: 0.4;
+}
+
+.gridlines path {
+  display: none;
+}
