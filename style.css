@@ -318,6 +318,10 @@ dl.info {
   display: grid;
   grid-template-columns: max-content auto;
   gap: 0.25em 1em;
+  margin: 0;
+
+  transition-duration: 500ms;
+  transition-property: opacity, visibility;
 }
 
 dl.info dt {
@@ -329,17 +333,34 @@ dl.info dd {
   margin: 0;
 }
 
+/* Hide tooltip */
+dl.info[hidden]:not(:hover, :focus-within) {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* Tooltip styling */
 .tooltip {
   position: fixed;
   top: 1em;
   left: 1em;
-  background: canvas;
-  color: canvastext;
-  border: 1px solid gray;
+
+  background-color: rgba(255, 255, 255, 0.85);
+  color: black;
+
+  border: 1px solid lightgray;
   border-radius: 0.5em;
+
   padding: 1em;
+
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+
+  backdrop-filter: blur(8px);
+
+  z-index: 10;
 }
 
+/* Scatterplot circles */
 circle {
   transition: 200ms;
   transform-origin: center;
