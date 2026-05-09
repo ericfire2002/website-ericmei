@@ -342,8 +342,6 @@ dl.info[hidden]:not(:hover, :focus-within) {
 /* Tooltip styling */
 .tooltip {
   position: fixed;
-  top: 1em;
-  left: 1em;
 
   background-color: rgba(255, 255, 255, 0.85);
   color: black;
@@ -358,6 +356,7 @@ dl.info[hidden]:not(:hover, :focus-within) {
   backdrop-filter: blur(8px);
 
   z-index: 10;
+  pointer-events: none;
 }
 
 /* Scatterplot circles */
