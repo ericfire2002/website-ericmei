@@ -84,19 +84,16 @@ function renderScatterPlot(data, commits) {
     right: width - margin.right,
     bottom: height - margin.bottom,
     left: margin.left,
-    width: width - margin.left - margin.right,
-    height: height - margin.top - margin.bottom,
   };
 
   const svg = d3
     .select('#chart')
     .append('svg')
-    .attr('viewBox', `0 0 ${width} ${height}`)
-    .style('overflow', 'visible');
+    .attr('viewBox', `0 0 ${width} ${height}`);
 
   const xScale = d3
     .scaleTime()
-    .domain(d3.extent(commits, (d) => d.datetime))
+    .domain(d3.extent(commits, d => d.datetime))
     .range([usableArea.left, usableArea.right])
     .nice();
 
@@ -109,7 +106,7 @@ function renderScatterPlot(data, commits) {
 
   const yAxis = d3
     .axisLeft(yScale)
-    .tickFormat((d) => String(d % 24).padStart(2, '0') + ':00');
+    .tickFormat(d => String(d % 24).padStart(2, '0') + ':00');
 
   svg
     .append('g')
@@ -121,14 +118,14 @@ function renderScatterPlot(data, commits) {
     .attr('transform', `translate(${usableArea.left}, 0)`)
     .call(yAxis);
 
-  const dots = svg.append('g').attr('class', 'dots');
-
-  dots
+  svg
+    .append('g')
+    .attr('class', 'dots')
     .selectAll('circle')
     .data(commits)
     .join('circle')
-    .attr('cx', (d) => xScale(d.datetime))
-    .attr('cy', (d) => yScale(d.hourFrac))
+    .attr('cx', d => xScale(d.datetime))
+    .attr('cy', d => yScale(d.hourFrac))
     .attr('r', 5)
     .attr('fill', 'steelblue');
 }
@@ -136,7 +133,7 @@ function renderScatterPlot(data, commits) {
 let data = await loadData();
 let commits = processCommits(data);
 
-// renderCommitInfo(data, commits);
+renderCommitInfo(data, commits);
 renderScatterPlot(data, commits);
 
 console.log(data);
