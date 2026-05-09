@@ -172,6 +172,7 @@ dots
   .on('mouseleave', () => {
     renderTooltipContent({});
   });
+}
 
 let data = await loadData();
 let commits = processCommits(data);
