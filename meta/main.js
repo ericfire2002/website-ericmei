@@ -82,6 +82,8 @@ function renderScatterPlot(data, commits) {
     right: width - margin.right,
     bottom: height - margin.bottom,
     left: margin.left,
+    width: width - margin.left - margin.right,
+    height: height - margin.top - margin.bottom,
   };
 
   const svg = d3
