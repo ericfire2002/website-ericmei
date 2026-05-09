@@ -138,3 +138,6 @@ let commits = processCommits(data);
 
 renderCommitInfo(data, commits);
 renderScatterPlot(data, commits);
+
+console.log(data);
+console.log(commits);
