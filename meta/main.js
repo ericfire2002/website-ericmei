@@ -139,11 +139,12 @@ function renderScatterPlot(data, commits) {
     .range([usableArea.bottom, usableArea.top]);
 
   const [minLines, maxLines] = d3.extent(commits, (d) => d.totalLines);
-
+console.log(minLines, maxLines);
+console.log(commits.map(d => d.totalLines));
   const rScale = d3
     .scaleSqrt()
     .domain([minLines, maxLines])
-    .range([2, 30]);
+    .range([4, 60])
 
   const sortedCommits = d3.sort(commits, (d) => -d.totalLines);
   const gridlines = svg
