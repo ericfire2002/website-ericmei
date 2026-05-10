@@ -101,8 +101,8 @@ function updateTooltipVisibility(isVisible) {
 
 function updateTooltipPosition(event) {
   const tooltip = document.getElementById('commit-tooltip');
-  tooltip.style.left = `${event.clientX}px`;
-  tooltip.style.top = `${event.clientY}px`;
+  tooltip.style.left = `${event.clientX + 10}px`;
+  tooltip.style.top = `${event.clientY + 10}px`;
 }
 
 function isCommitSelected(selection, commit) {
@@ -174,10 +174,17 @@ function brushed(event) {
   renderLanguageBreakdown(selection);
 }
 
-function createBrushSelector(svg) {
-  svg.call(d3.brush().on('start brush end', brushed));
+// function createBrushSelector(svg) {
+//   svg.call(d3.brush().on('start brush end', brushed));
 
-  svg.selectAll('.dots, .overlay ~ *').raise();
+//   svg.selectAll('.dots, .overlay ~ *').raise();
+// }
+
+function createBrushSelector(svg) {
+  svg
+    .append('g')
+    .attr('class', 'brush')
+    .call(d3.brush().on('start brush end', brushed));
 }
 
 function renderScatterPlot(data, commits) {
@@ -217,8 +224,6 @@ function renderScatterPlot(data, commits) {
     .range([usableArea.bottom, usableArea.top]);
 
   const [minLines, maxLines] = d3.extent(commits, (d) => d.totalLines);
-console.log(minLines, maxLines);
-console.log(commits.map(d => d.totalLines));
   const rScale = d3
     .scaleSqrt()
     .domain([minLines, maxLines])
@@ -253,9 +258,9 @@ console.log(commits.map(d => d.totalLines));
     .attr('transform', `translate(${usableArea.left}, 0)`)
     .call(yAxis);
 
-const dots = svg.append('g').attr('class', 'dots');
-
-dots
+const dots = svg
+  .append('g')
+  .attr('class', 'dots')
   .selectAll('circle')
   .data(sortedCommits)
   .join('circle')
@@ -286,6 +291,3 @@ commits = processCommits(data);
 
 renderCommitInfo(data, commits);
 renderScatterPlot(data, commits);
-
-console.log(data);
-console.log(commits);

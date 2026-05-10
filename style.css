@@ -387,3 +387,12 @@ circle.selected {
   stroke-dasharray: 5 3;
   animation: marching-ants 2s linear infinite;
 }
+
+.brush {
+  pointer-events: all;
+}
+
+.brush .overlay {
+  pointer-events: all;
+  cursor: crosshair;
+}
